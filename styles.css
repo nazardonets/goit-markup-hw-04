@@ -1,0 +1,397 @@
+/* COMMON */
+
+:root {
+	--font-main: 'Roboto', sans-serif;
+	--font-logo: 'Raleway', serif;
+	--color-brand: #2196f3;
+	--color-brand-hover: #188ce8;
+	--color-dark-grey: #212121;
+	--color-light-grey: #757575;
+	--color-light-grey-2: #eeeeee;
+	--color-white: #ffffff;
+	--color-dark-bg: #2f303a;
+	--color-section-alternate-bg: #f5f4fa;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-main);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.7;
+	letter-spacing: 0.03em;
+}
+
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+}
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+/* Not clear whether that's a designer's mistake or not, but the following declaration removes the bottom padding from section component, according to the design */
+
+.section:nth-child(2) {
+	padding-bottom: 0;
+}
+
+/* UTILITIES */
+
+.--hidden {
+	position: absolute;
+	left: 0px;
+	top: -500px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.--alternate-color {
+	background-color: var(--color-section-alternate-bg);
+}
+
+/* HEADER */
+
+.header .container {
+	width: 100%;
+	height: 100%;
+}
+
+.header,
+.header .logo,
+.header .flex-wrapper,
+.header-nav,
+.header-nav__list,
+.header-nav__list-item,
+.header-nav__list-item__link,
+.header-contacts__list,
+.header-contacts__list-item,
+.header-contacts__list-item__link,
+.section-hero,
+.benefits__list,
+.what-we-do__list,
+.our-team__list,
+.portfolio-filters__list {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.header-nav__list,
+.header-contacts__list,
+.benefits__list,
+.what-we-do__list,
+.our-team__list,
+.footer-contacts__list,
+.portfolio-filters__list,
+.portfolio-projects__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.logo,
+.header-nav__list-item__link,
+.header-contacts__list-item__link,
+.portfolio-projects__list-item__link,
+.footer-contacts__list-item__link {
+	text-decoration: none;
+}
+
+.header {
+	height: 80px;
+	border-bottom: 1px solid #ececec;
+	box-sizing: border-box;
+}
+
+.logo {
+	display: block;
+	margin-right: 93px;
+	font-family: var(--font-logo);
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	color: var(--color-brand);
+}
+
+.logo--black {
+	color: var(--color-dark-grey);
+}
+
+.logo--white {
+	color: var(--color-white);
+}
+
+.header-nav__list-item__link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: var(--color-dark-grey);
+}
+
+.header-contacts__list-item__link,
+.footer-contacts__list-item__link {
+	color: var(--color-light-grey);
+}
+
+.header-contacts__list-item__link {
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+
+.header-nav__list-item__link:hover,
+.header-contacts__list-item__link:hover,
+.footer-contacts__list-item__link:hover {
+	color: var(--color-brand);
+}
+
+.header-nav__list-item:not(:last-child),
+.header-contacts__list-item:not(:last-child) {
+	margin-right: 50px;
+}
+
+.header-contacts__list {
+	margin-left: auto;
+}
+
+/* HERO */
+
+.section-hero {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-color: var(--color-dark-bg);
+}
+
+.section-hero .flex-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero__title {
+	text-align: center;
+	color: var(--color-white);
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+
+.hero__button {
+	width: fit-content;
+	color: var(--color-white);
+	padding: 10px 32px 10px 32px;
+	font-size: 16px;
+	line-height: 1.87;
+	background: #2196f3;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+
+.hero__button:hover {
+	background-color: var(--color-brand-hover);
+}
+
+/* BENEFITS */
+
+.section__title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+
+.benefits__list-item {
+	max-width: 270px;
+}
+
+.benefits__list-item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.benefits__list-item__title {
+	margin: 0 0 10px 0;
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--color-dark-grey);
+}
+
+.benefits__list-item__description {
+	margin: 0;
+	color: var(--color-light-grey);
+}
+
+/* WHAT WE DO */
+
+.what-we-do__list,
+.benefits__list,
+.our-team__list {
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 100%;
+}
+
+.what-we-do__list-item {
+	flex-basis: auto;
+}
+
+.what-we-do__list-item:not(:last-child),
+.our-team__list-item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.what-we-do__list-item__image,
+.our-team__list-item__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* OUR TEAM */
+
+.our-team__list-item {
+	background: var(--color-white);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.our-team__list-item__title {
+	margin: 30px 0 0 0;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.18;
+	color: var(--color-dark-grey);
+}
+
+.our-team__list-item__description {
+	margin: 10px 0 0 0;
+	font-size: 16px;
+	line-height: 1.18;
+	color: var(--color-light-grey);
+}
+
+/* PORTFOLIO */
+
+.portfolio-filters__list {
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.portfolio-filters__list-item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.portfolio-filters__list-item__button {
+	padding: 6px 22px;
+	background-color: var(--color-section-alternate-bg);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	letter-spacing: 0.03em;
+	color: var(--color-dark-grey);
+	border: none;
+	border-radius: 4px;
+}
+
+.portfolio-filters__list-item__button:hover,
+.portfolio-filters__list-item__button:focus {
+	background-color: var(--color-brand);
+	color: var(--color-white);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+		0px 2px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.portfolio-projects__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.portfolio-projects__list-item {
+	max-width: 370px;
+}
+
+.portfolio-projects__list-item,
+.portfolio-projects__list-item__link,
+.portfolio-projects__list-item__content-box {
+	box-sizing: border-box;
+}
+
+.portfolio-projects__list-item__link-img {
+	display: block;
+	width: 100%;
+}
+
+.portfolio-projects__list-item__content-box {
+	padding: 20px 24px;
+	border-right: 1px solid var(--color-light-grey-2);
+	border-bottom: 1px solid var(--color-light-grey-2);
+	border-left: 1px solid var(--color-light-grey-2);
+}
+
+.portfolio-projects__list-item:not(:nth-last-child(-n + 3)) {
+	margin-bottom: 30px;
+}
+
+.portfolio-projects__list-item__link-title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: var(--color-dark-grey);
+}
+
+.portfolio-projects__list-item__link-description {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.03em;
+	color: var(--color-light-grey);
+}
+
+/* FOOTER */
+
+.footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: var(--color-dark-bg);
+}
+
+.footer .logo {
+	margin-bottom: 20px;
+}
+
+.footer__address {
+	font-style: normal;
+	color: var(--color-white);
+}
+
+.footer-contacts__list-item:first-child .footer-contacts__list-item__link {
+	color: var(--color-section-alternate-bg);
+}
+
+.footer-contacts__list-item:not(:last-child) {
+	margin-bottom: 9px;
+}

@@ -63,18 +63,17 @@ body {
 .header .container {
 	width: 100%;
 	height: 100%;
+	display: flex;
 }
 
 .header,
-.header .logo,
-.header .flex-wrapper,
 .header-nav,
 .header-nav__list,
 .header-nav__list-item,
-.header-nav__list-item__link,
+.header-nav__list-item-link,
 .header-contacts__list,
 .header-contacts__list-item,
-.header-contacts__list-item__link,
+.header-contacts__list-item-link,
 .section-hero,
 .benefits__list,
 .what-we-do__list,
@@ -99,10 +98,10 @@ body {
 }
 
 .logo,
-.header-nav__list-item__link,
-.header-contacts__list-item__link,
-.portfolio-projects__list-item__link,
-.footer-contacts__list-item__link {
+.header-nav__list-item-link,
+.header-contacts__list-item-link,
+.portfolio-projects__list-item-link,
+.footer-contacts__list-item-link {
 	text-decoration: none;
 }
 
@@ -130,7 +129,7 @@ body {
 	color: var(--color-white);
 }
 
-.header-nav__list-item__link {
+.header-nav__list-item-link {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
@@ -138,20 +137,20 @@ body {
 	color: var(--color-dark-grey);
 }
 
-.header-contacts__list-item__link,
-.footer-contacts__list-item__link {
+.header-contacts__list-item-link,
+.footer-contacts__list-item-link {
 	color: var(--color-light-grey);
 }
 
-.header-contacts__list-item__link {
+.header-contacts__list-item-link {
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
 
-.header-nav__list-item__link:hover,
-.header-contacts__list-item__link:hover,
-.footer-contacts__list-item__link:hover {
+.header-nav__list-item-link:hover,
+.header-contacts__list-item-link:hover,
+.footer-contacts__list-item-link:hover {
 	color: var(--color-brand);
 }
 
@@ -224,7 +223,7 @@ body {
 	margin-right: 30px;
 }
 
-.benefits__list-item__title {
+.benefits__list-item-title {
 	margin: 0 0 10px 0;
 	font-weight: 700;
 	line-height: 1.14;
@@ -243,7 +242,6 @@ body {
 .benefits__list,
 .our-team__list {
 	justify-content: space-between;
-	align-items: flex-start;
 	max-width: 100%;
 }
 
@@ -256,7 +254,7 @@ body {
 	margin-right: 30px;
 }
 
-.what-we-do__list-item__image,
+.what-we-do__list-item-image,
 .our-team__list-item__image {
 	display: block;
 	width: 100%;
@@ -274,7 +272,7 @@ body {
 	padding-bottom: 30px;
 }
 
-.our-team__list-item__title {
+.our-team__list-item-title {
 	margin: 30px 0 0 0;
 	font-weight: 500;
 	font-size: 16px;
@@ -282,7 +280,7 @@ body {
 	color: var(--color-dark-grey);
 }
 
-.our-team__list-item__description {
+.our-team__list-item-description {
 	margin: 10px 0 0 0;
 	font-size: 16px;
 	line-height: 1.18;
@@ -300,7 +298,7 @@ body {
 	margin-right: 8px;
 }
 
-.portfolio-filters__list-item__button {
+.portfolio-filters__list-item-button {
 	padding: 6px 22px;
 	background-color: var(--color-section-alternate-bg);
 	font-weight: 500;
@@ -312,8 +310,8 @@ body {
 	border-radius: 4px;
 }
 
-.portfolio-filters__list-item__button:hover,
-.portfolio-filters__list-item__button:focus {
+.portfolio-filters__list-item-button:hover,
+.portfolio-filters__list-item-button:focus {
 	background-color: var(--color-brand);
 	color: var(--color-white);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -333,17 +331,17 @@ body {
 }
 
 .portfolio-projects__list-item,
-.portfolio-projects__list-item__link,
-.portfolio-projects__list-item__content-box {
+.portfolio-projects__list-item-link,
+.portfolio-projects__list-item-content-box {
 	box-sizing: border-box;
 }
 
-.portfolio-projects__list-item__link-img {
+.portfolio-projects__list-item-link-img {
 	display: block;
 	width: 100%;
 }
 
-.portfolio-projects__list-item__content-box {
+.portfolio-projects__list-item-content-box {
 	padding: 20px 24px;
 	border-right: 1px solid var(--color-light-grey-2);
 	border-bottom: 1px solid var(--color-light-grey-2);
@@ -354,7 +352,7 @@ body {
 	margin-bottom: 30px;
 }
 
-.portfolio-projects__list-item__link-title {
+.portfolio-projects__list-item-link-title {
 	margin: 0;
 	font-weight: 700;
 	font-size: 18px;
@@ -363,7 +361,7 @@ body {
 	color: var(--color-dark-grey);
 }
 
-.portfolio-projects__list-item__link-description {
+.portfolio-projects__list-item-link-description {
 	margin: 0;
 	font-size: 16px;
 	line-height: 1.88;
@@ -388,7 +386,7 @@ body {
 	color: var(--color-white);
 }
 
-.footer-contacts__list-item:first-child .footer-contacts__list-item__link {
+.footer-contacts__list-item:first-child .footer-contacts__list-item-link {
 	color: var(--color-section-alternate-bg);
 }
 

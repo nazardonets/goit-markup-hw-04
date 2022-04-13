@@ -11,6 +11,7 @@
 	--color-white: #ffffff;
 	--color-dark-bg: #2f303a;
 	--color-section-alternate-bg: #f5f4fa;
+	--color-icon-inactive: #afb1b8;
 }
 
 body {
@@ -138,7 +139,8 @@ body {
 }
 
 .header-contacts__list-item-link,
-.footer-contacts__list-item-link {
+.footer-contacts__list-item-link,
+.header-contacts__list-item-icon {
 	color: var(--color-light-grey);
 }
 
@@ -149,9 +151,19 @@ body {
 }
 
 .header-nav__list-item-link:hover,
+.header-nav__list-item-link:focus,
 .header-contacts__list-item-link:hover,
-.footer-contacts__list-item-link:hover {
+.header-contacts__list-item-link:focus,
+.footer-contacts__list-item-link:hover,
+.footer-contacts__list-item-link:focus,
+.header-contacts__list-item-link:hover,
+.header-contacts__list-item-link:focus {
 	color: var(--color-brand);
+}
+
+.header-contacts__list-item-icon {
+	margin-right: 10px;
+	color: inherit;
 }
 
 .header-nav__list-item:not(:last-child),
@@ -193,6 +205,8 @@ body {
 	color: var(--color-white);
 	padding: 10px 32px 10px 32px;
 	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
 	line-height: 1.87;
 	background: #2196f3;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -219,6 +233,22 @@ body {
 	max-width: 270px;
 }
 
+.benefits__list-item-media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120px;
+	margin-bottom: 30px;
+	background-color: var(--color-section-alternate-bg);
+	border-radius: 4px;
+}
+
+.benefits__list-item-icon {
+	display: block;
+	width: 70px;
+	height: 70px;
+}
+
 .benefits__list-item:not(:last-child) {
 	margin-right: 30px;
 }
@@ -231,7 +261,7 @@ body {
 	color: var(--color-dark-grey);
 }
 
-.benefits__list-item__description {
+.benefits__list-item-description {
 	margin: 0;
 	color: var(--color-light-grey);
 }
@@ -281,10 +311,43 @@ body {
 }
 
 .our-team__list-item-description {
-	margin: 10px 0 0 0;
+	margin: 10px 0 16px 0;
 	font-size: 16px;
 	line-height: 1.18;
 	color: var(--color-light-grey);
+}
+
+.our-team__list-item-contacts {
+	display: flex;
+	justify-content: center;
+}
+
+.our-team__list-item-social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+}
+
+.our-team__list-item-social-link {
+	color: var(--color-icon-inactive);
+}
+
+.our-team__list-item-social-link:not(:last-child) {
+	margin-right: 10px;
+}
+
+.our-team__list-item-social-link:hover,
+.our-team__list-item-social-link:focus {
+	background-color: var(--color-brand);
+	color: var(--color-white);
+}
+
+.our-team__list-item-social-icon {
+	width: 20px;
+	height: 20px;
 }
 
 /* PORTFOLIO */

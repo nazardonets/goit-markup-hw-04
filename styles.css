@@ -11,7 +11,8 @@
 	--color-white: #ffffff;
 	--color-dark-bg: #2f303a;
 	--color-section-alternate-bg: #f5f4fa;
-	--color-icon-inactive: #afb1b8;
+	--color-icon-team-inactive: #afb1b8;
+	--color-icon-footer-inactive: #44454e;
 }
 
 body {
@@ -39,10 +40,6 @@ body {
 }
 
 /* Not clear whether that's a designer's mistake or not, but the following declaration removes the bottom padding from section component, according to the design */
-
-.section:nth-child(2) {
-	padding-bottom: 0;
-}
 
 /* UTILITIES */
 
@@ -181,12 +178,7 @@ body {
 	padding-top: 200px;
 	padding-bottom: 200px;
 	background-color: var(--color-dark-bg);
-}
-
-.section-hero .flex-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	text-align: center;
 }
 
 .hero__title {
@@ -220,6 +212,10 @@ body {
 }
 
 /* BENEFITS */
+
+.benefits-section {
+	padding-bottom: 0;
+}
 
 .section__title {
 	font-weight: 700;
@@ -275,10 +271,6 @@ body {
 	max-width: 100%;
 }
 
-.what-we-do__list-item {
-	flex-basis: auto;
-}
-
 .what-we-do__list-item:not(:last-child),
 .our-team__list-item:not(:last-child) {
 	margin-right: 30px;
@@ -322,7 +314,8 @@ body {
 	justify-content: center;
 }
 
-.our-team__list-item-social-link {
+.our-team__list-item-social-link,
+.footer-content__socials-block-social-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -332,20 +325,24 @@ body {
 }
 
 .our-team__list-item-social-link {
-	color: var(--color-icon-inactive);
+	color: var(--color-icon-team-inactive);
 }
 
-.our-team__list-item-social-link:not(:last-child) {
+.our-team__list-item-social-link:not(:last-child),
+.footer-content__socials-block-social-link:not(:last-child) {
 	margin-right: 10px;
 }
 
 .our-team__list-item-social-link:hover,
-.our-team__list-item-social-link:focus {
+.our-team__list-item-social-link:focus,
+.footer-content__socials-block-social-link:focus,
+.footer-content__socials-block-social-link:hover {
 	background-color: var(--color-brand);
 	color: var(--color-white);
 }
 
-.our-team__list-item-social-icon {
+.our-team__list-item-social-icon,
+.footer-content__socials-block-social-icon {
 	width: 20px;
 	height: 20px;
 }
@@ -440,12 +437,39 @@ body {
 	background-color: var(--color-dark-bg);
 }
 
+.footer-content {
+	display: flex;
+	align-items: baseline;
+}
+
+.footer-content__contacts-block {
+	margin-right: 70px;
+}
+
 .footer .logo {
 	margin-bottom: 20px;
 }
 
 .footer__address {
 	font-style: normal;
+	color: var(--color-white);
+}
+
+.footer-content__socials-block-contacts {
+	display: flex;
+}
+
+.footer-content__socials-cta-text {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin: 0 0 20px 0;
+}
+
+.footer-content__socials-block-social-link {
+	background-color: var(--color-icon-footer-inactive);
 	color: var(--color-white);
 }
 

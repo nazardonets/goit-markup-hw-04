@@ -101,7 +101,7 @@ body {
 .logo,
 .header-nav__link,
 .header-contacts__link,
-.portfolio-projects__item-link,
+.portfolio-projects__link,
 .footer-contacts__link,
 .our-clients__link {
 	text-decoration: none;
@@ -431,7 +431,7 @@ body {
 }
 
 .portfolio-projects__item,
-.portfolio-projects__item-link,
+.portfolio-projects__link,
 .portfolio-projects__content-box {
 	box-sizing: border-box;
 }

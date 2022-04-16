@@ -1,4 +1,4 @@
-/* COMMON */
+/* GLOBAL */
 
 :root {
 	--font-main: 'Roboto', sans-serif;
@@ -26,6 +26,32 @@ body {
 	letter-spacing: 0.03em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
 .container {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -38,8 +64,6 @@ body {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
-
-/* Not clear whether that's a designer's mistake or not, but the following declaration removes the bottom padding from section component, according to the design */
 
 /* UTILITIES */
 
@@ -64,47 +88,15 @@ body {
 	display: flex;
 }
 
-.header,
 .header-nav,
 .header-nav__list,
-.header-nav__item,
-.header-nav__link,
 .header-contacts__list,
-.header-contacts__item,
-.header-contacts__link,
-.section-hero,
 .benefits__list,
 .what-we-do__list,
 .our-team__list,
 .portfolio-filters__list {
 	display: flex;
-	height: 100%;
 	align-items: center;
-}
-
-.header-nav__list,
-.header-contacts__list,
-.benefits__list,
-.what-we-do__list,
-.our-team__list,
-.our-team__socials-list,
-.footer-contacts__list,
-.footer-content__socials-list,
-.portfolio-filters__list,
-.portfolio-projects__list,
-.our-clients__list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.logo,
-.header-nav__link,
-.header-contacts__link,
-.portfolio-projects__link,
-.footer-contacts__link,
-.our-clients__link {
-	text-decoration: none;
 }
 
 .header {
@@ -179,8 +171,11 @@ body {
 /* HERO */
 
 .section-hero {
+	max-width: 1600px;
 	padding-top: 200px;
 	padding-bottom: 200px;
+	margin-left: auto;
+	margin-right: auto;
 	background: url(./images/hero.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -202,14 +197,13 @@ body {
 }
 
 .hero__button {
-	width: fit-content;
 	color: var(--color-white);
 	padding: 10px 32px 10px 32px;
 	font-size: 16px;
 	font-weight: 700;
 	letter-spacing: 0.06em;
 	line-height: 1.87;
-	background: #2196f3;
+	background: var(--color-brand);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	border: none;
@@ -286,13 +280,6 @@ body {
 	margin-right: 30px;
 }
 
-.what-we-do__image,
-.our-team__list-image {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
 /* OUR TEAM */
 
 .our-team__item {
@@ -301,11 +288,14 @@ body {
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 	text-align: center;
-	padding-bottom: 30px;
+}
+
+.our-team__info {
+	padding: 30px 32px;
 }
 
 .our-team__item-title {
-	margin: 30px 0 0 0;
+	margin-bottom: 16px;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.18;
@@ -313,7 +303,7 @@ body {
 }
 
 .our-team__description {
-	margin: 10px 0 16px 0;
+	margin-bottom: 10px;
 	font-size: 16px;
 	line-height: 1.18;
 	color: var(--color-light-grey);
@@ -322,7 +312,6 @@ body {
 .our-team__socials-list {
 	display: flex;
 	justify-content: space-between;
-	padding: 0 32px;
 }
 
 .our-team__socials-link,
@@ -339,7 +328,6 @@ body {
 	color: var(--color-icon-team-inactive);
 }
 
-.our-team__socials-item:not(:last-child),
 .footer-content__socials-link:not(:last-child) {
 	margin-right: 10px;
 }
@@ -366,9 +354,11 @@ body {
 }
 
 .our-clients__link {
-	display: inline-block;
-	padding: 16px 32px;
-	box-sizing: border-box;
+	display: flex;
+	width: 170px;
+	height: 92px;
+	justify-content: center;
+	align-items: center;
 	color: var(--color-icon-team-inactive);
 	border: 1px solid var(--color-icon-team-inactive);
 	border-radius: 4px;
@@ -425,20 +415,19 @@ body {
 	max-width: 370px;
 }
 
-.portfolio-projects__item:hover {
+.portfolio-projects__link {
+	display: block;
+}
+
+.portfolio-projects__link:hover,
+.portfolio-projects__link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
 		1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-projects__item,
-.portfolio-projects__link,
-.portfolio-projects__content-box {
-	box-sizing: border-box;
-}
-
 .portfolio-projects__img {
-	display: block;
-	width: 100%;
+	width: 370px;
+	height: auto;
 }
 
 .portfolio-projects__content-box {
@@ -495,10 +484,6 @@ body {
 	color: var(--color-white);
 }
 
-.footer-content__socials-list {
-	display: flex;
-}
-
 .footer-content__socials-cta-text {
 	font-weight: 700;
 	font-size: 14px;
@@ -506,6 +491,10 @@ body {
 	text-transform: uppercase;
 	color: #ffffff;
 	margin: 0 0 20px 0;
+}
+
+.footer-content__socials-list {
+	display: flex;
 }
 
 .footer-content__socials-item:not(:last-child) {
